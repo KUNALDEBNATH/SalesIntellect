@@ -1,0 +1,13 @@
+@"
+.venv/
+__pycache__/
+*.pyc
+*.pt
+*.pth
+*.pkl
+*.bin
+*.safetensors
+*.log
+.env
+.vscode/
+"@ | Out-File -Encoding utf8 .gitignore
