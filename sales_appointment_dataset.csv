@@ -1,0 +1,101 @@
+Enquiry ID,Appointment Date,Time,Customer Name,Vehicle,Status
+ENQ001,4/22/2026,16:30,Arjun,Hyundai i20,Cancelled
+ENQ002,4/30/2026,15:00,Divya,Maruti Swift,Scheduled
+ENQ003,4/27/2026,14:30,Ananya,Honda City,Completed
+ENQ004,4/23/2026,16:00,Karthik,Maruti Swift,Cancelled
+ENQ005,5/1/2026,14:00,Arjun,Honda City,Completed
+ENQ006,4/28/2026,13:30,Ravi,Maruti Swift,Completed
+ENQ007,4/29/2026,15:00,Ananya,Honda City,Scheduled
+ENQ008,4/18/2026,11:00,Meera,Kia Seltos,Scheduled
+ENQ009,5/1/2026,12:00,Divya,Hyundai i20,Cancelled
+ENQ010,4/28/2026,16:30,Meera,Maruti Swift,No Show
+ENQ011,4/25/2026,10:00,Ravi,Maruti Swift,Completed
+ENQ012,4/17/2026,13:00,Arjun,Hyundai i20,Cancelled
+ENQ013,4/29/2026,14:30,Ravi,Tata Nexon,Scheduled
+ENQ014,4/23/2026,16:00,Vikram,Tata Nexon,Cancelled
+ENQ015,4/23/2026,14:30,Karthik,Hyundai i20,Completed
+ENQ016,4/21/2026,15:00,Vikram,Tata Nexon,Cancelled
+ENQ017,4/30/2026,17:00,Ravi,Tata Nexon,No Show
+ENQ018,4/30/2026,10:30,Arjun,Honda City,Cancelled
+ENQ019,4/29/2026,15:00,Divya,Tata Nexon,Scheduled
+ENQ020,4/25/2026,13:30,Ravi,Kia Seltos,Scheduled
+ENQ021,4/21/2026,13:30,Ravi,Maruti Swift,Scheduled
+ENQ022,4/18/2026,14:30,Ananya,Honda City,Scheduled
+ENQ023,4/30/2026,18:30,Vikram,Tata Nexon,Scheduled
+ENQ024,4/20/2026,16:00,Sneha,Hyundai i20,No Show
+ENQ025,4/27/2026,18:00,Karthik,Maruti Swift,No Show
+ENQ026,4/29/2026,13:30,Meera,Honda City,Scheduled
+ENQ027,4/24/2026,15:00,Meera,Hyundai i20,Completed
+ENQ028,4/28/2026,13:00,Ananya,Honda City,No Show
+ENQ029,4/26/2026,10:00,Ananya,Honda City,Cancelled
+ENQ030,4/21/2026,11:00,Karthik,Hyundai i20,Completed
+ENQ031,5/1/2026,17:00,Karthik,Honda City,Completed
+ENQ032,4/24/2026,17:30,Karthik,Tata Nexon,Cancelled
+ENQ033,4/30/2026,18:30,Ananya,Maruti Swift,Scheduled
+ENQ034,4/23/2026,10:00,Ananya,Honda City,No Show
+ENQ035,4/26/2026,16:00,Divya,Honda City,No Show
+ENQ036,4/23/2026,18:00,Meera,Honda City,No Show
+ENQ037,4/20/2026,15:30,Karthik,Kia Seltos,No Show
+ENQ038,5/1/2026,13:00,Sneha,Hyundai i20,Scheduled
+ENQ039,4/22/2026,18:30,Meera,Honda City,Scheduled
+ENQ040,4/28/2026,10:00,Karthik,Honda City,Cancelled
+ENQ041,4/25/2026,13:00,Divya,Maruti Swift,Completed
+ENQ042,4/27/2026,18:00,Sneha,Maruti Swift,No Show
+ENQ043,4/17/2026,15:30,Divya,Hyundai i20,Completed
+ENQ044,4/23/2026,15:00,Vikram,Honda City,Cancelled
+ENQ045,4/26/2026,17:00,Ananya,Honda City,Completed
+ENQ046,4/27/2026,10:00,Karthik,Honda City,No Show
+ENQ047,4/30/2026,13:00,Meera,Tata Nexon,No Show
+ENQ048,4/18/2026,15:30,Ananya,Kia Seltos,Cancelled
+ENQ049,4/21/2026,18:30,Divya,Honda City,Scheduled
+ENQ050,4/17/2026,15:30,Vikram,Kia Seltos,Cancelled
+ENQ051,4/23/2026,11:00,Sneha,Hyundai i20,Completed
+ENQ052,4/22/2026,17:30,Vikram,Kia Seltos,Completed
+ENQ053,4/18/2026,15:00,Vikram,Honda City,Cancelled
+ENQ054,4/20/2026,14:00,Ananya,Maruti Swift,Cancelled
+ENQ055,4/28/2026,15:30,Arjun,Honda City,No Show
+ENQ056,4/25/2026,16:30,Sneha,Kia Seltos,Scheduled
+ENQ057,4/25/2026,18:30,Karthik,Tata Nexon,Scheduled
+ENQ058,4/17/2026,17:00,Meera,Honda City,Completed
+ENQ059,4/22/2026,13:30,Arjun,Maruti Swift,No Show
+ENQ060,4/28/2026,13:00,Karthik,Kia Seltos,Completed
+ENQ061,4/29/2026,10:00,Arjun,Honda City,Completed
+ENQ062,4/26/2026,18:30,Ananya,Honda City,Scheduled
+ENQ063,4/26/2026,14:00,Ananya,Honda City,No Show
+ENQ064,4/30/2026,17:00,Arjun,Maruti Swift,Completed
+ENQ065,4/17/2026,17:30,Arjun,Maruti Swift,Cancelled
+ENQ066,4/22/2026,15:00,Ravi,Kia Seltos,No Show
+ENQ067,4/26/2026,11:00,Vikram,Honda City,Completed
+ENQ068,4/25/2026,13:00,Karthik,Maruti Swift,Cancelled
+ENQ069,4/28/2026,14:30,Divya,Tata Nexon,Completed
+ENQ070,4/19/2026,10:30,Arjun,Kia Seltos,Scheduled
+ENQ071,4/18/2026,13:00,Karthik,Hyundai i20,No Show
+ENQ072,4/20/2026,17:30,Vikram,Maruti Swift,Scheduled
+ENQ073,4/17/2026,11:30,Karthik,Honda City,Scheduled
+ENQ074,4/23/2026,12:00,Sneha,Hyundai i20,No Show
+ENQ075,4/25/2026,10:00,Ravi,Tata Nexon,No Show
+ENQ076,5/1/2026,14:00,Ananya,Kia Seltos,Cancelled
+ENQ077,4/21/2026,18:30,Divya,Tata Nexon,Cancelled
+ENQ078,4/19/2026,10:30,Arjun,Tata Nexon,No Show
+ENQ079,4/26/2026,10:00,Arjun,Hyundai i20,No Show
+ENQ080,4/28/2026,16:30,Ravi,Hyundai i20,Scheduled
+ENQ081,4/27/2026,18:30,Ravi,Tata Nexon,Cancelled
+ENQ082,4/28/2026,13:00,Arjun,Tata Nexon,No Show
+ENQ083,4/23/2026,16:30,Meera,Kia Seltos,Cancelled
+ENQ084,4/18/2026,16:30,Divya,Hyundai i20,Scheduled
+ENQ085,4/30/2026,13:00,Ananya,Hyundai i20,Scheduled
+ENQ086,4/25/2026,13:00,Divya,Maruti Swift,Cancelled
+ENQ087,4/30/2026,17:30,Meera,Honda City,Completed
+ENQ088,4/18/2026,15:30,Divya,Hyundai i20,Cancelled
+ENQ089,4/27/2026,12:30,Vikram,Hyundai i20,Completed
+ENQ090,4/18/2026,10:30,Ananya,Hyundai i20,Cancelled
+ENQ091,4/21/2026,16:00,Arjun,Tata Nexon,Scheduled
+ENQ092,4/22/2026,10:30,Sneha,Maruti Swift,Completed
+ENQ093,4/22/2026,10:00,Meera,Honda City,Cancelled
+ENQ094,4/23/2026,15:30,Arjun,Honda City,No Show
+ENQ095,4/22/2026,15:30,Ravi,Tata Nexon,No Show
+ENQ096,4/20/2026,12:00,Arjun,Maruti Swift,No Show
+ENQ097,4/29/2026,18:00,Arjun,Tata Nexon,Completed
+ENQ098,4/24/2026,15:00,Karthik,Kia Seltos,No Show
+ENQ099,4/28/2026,14:00,Sneha,Kia Seltos,Scheduled
+ENQ100,4/23/2026,10:30,Arjun,Hyundai i20,Cancelled

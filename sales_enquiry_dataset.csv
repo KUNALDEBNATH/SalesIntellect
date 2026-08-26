@@ -1,0 +1,101 @@
+ENQUIRY ID,Customer Name,Phone Number,Email,Gender,Vehicle Name / Model,Enquiry Source,Enquiry Date,Appointment Date,City / State,Customer Type,Payment Type,Test Ride Taken,Status
+ENQ001,Ananya,9945206132,user0@example.com,Male,Honda City,Walk-in,4/1/2026,4/2/2026,"Hyderabad, TS",Returning,Loan,Yes,Booked
+ENQ002,Arjun,9381177898,user1@example.com,Female,Kia Seltos,Call,4/16/2026,4/22/2026,"Hyderabad, TS",New,Loan,No,Contacted
+ENQ003,Divya,9845661296,user2@example.com,Female,Tata Nexon,Walk-in,4/16/2026,4/22/2026,"Chennai, TN",New,Cash,No,Booked
+ENQ004,Ananya,9464228084,user3@example.com,Female,Tata Nexon,Website,3/24/2026,3/29/2026,"Coimbatore, TN",New,Loan,Yes,Contacted
+ENQ005,Vikram,9517263141,user4@example.com,Female,Tata Nexon,Website,3/30/2026,4/8/2026,"Hyderabad, TS",New,Cash,No,Closed
+ENQ006,Karthik,9769393649,user5@example.com,Female,Tata Nexon,Website,4/1/2026,4/6/2026,"Hyderabad, TS",New,EMI,Yes,New Lead
+ENQ007,Ravi,9766828827,user6@example.com,Male,Hyundai i20,Walk-in,4/3/2026,4/5/2026,"Bangalore, KA",Returning,Cash,No,Closed
+ENQ008,Ananya,9113573391,user7@example.com,Female,Kia Seltos,Website,4/1/2026,4/9/2026,"Hyderabad, TS",New,Cash,No,Closed
+ENQ009,Ravi,9841296946,user8@example.com,Male,Tata Nexon,Website,3/19/2026,3/27/2026,"Chennai, TN",New,Cash,No,New Lead
+ENQ010,Vikram,9580806184,user9@example.com,Female,Honda City,Call,3/21/2026,3/25/2026,"Bangalore, KA",Returning,EMI,No,Booked
+ENQ011,Meera,9361709609,user10@example.com,Male,Maruti Swift,Website,3/28/2026,4/5/2026,"Coimbatore, TN",Returning,EMI,No,Contacted
+ENQ012,Ananya,9816434971,user11@example.com,Male,Tata Nexon,Walk-in,3/18/2026,3/20/2026,"Chennai, TN",New,Loan,No,Booked
+ENQ013,Ravi,9373790702,user12@example.com,Male,Hyundai i20,Walk-in,4/10/2026,4/15/2026,"Coimbatore, TN",Returning,Cash,Yes,New Lead
+ENQ014,Meera,9863862339,user13@example.com,Male,Maruti Swift,Walk-in,4/6/2026,4/9/2026,"Bangalore, KA",New,EMI,Yes,Contacted
+ENQ015,Ananya,9235191190,user14@example.com,Female,Tata Nexon,Walk-in,4/7/2026,4/9/2026,"Hyderabad, TS",Returning,EMI,Yes,New Lead
+ENQ016,Sneha,9589366438,user15@example.com,Female,Tata Nexon,Call,4/16/2026,4/21/2026,"Chennai, TN",New,Cash,Yes,Closed
+ENQ017,Ravi,9659965938,user16@example.com,Male,Honda City,Walk-in,4/10/2026,4/14/2026,"Chennai, TN",New,EMI,Yes,Booked
+ENQ018,Arjun,9609841179,user17@example.com,Female,Hyundai i20,Call,4/14/2026,4/19/2026,"Coimbatore, TN",New,Cash,No,Contacted
+ENQ019,Ravi,9951316533,user18@example.com,Female,Maruti Swift,Call,4/13/2026,4/23/2026,"Chennai, TN",Returning,EMI,No,Booked
+ENQ020,Karthik,9460781047,user19@example.com,Female,Honda City,Call,4/6/2026,4/10/2026,"Hyderabad, TS",Returning,Cash,Yes,Closed
+ENQ021,Karthik,9944101090,user20@example.com,Female,Honda City,Website,3/21/2026,3/26/2026,"Coimbatore, TN",Returning,Cash,Yes,Closed
+ENQ022,Ananya,9233510230,user21@example.com,Male,Honda City,Walk-in,4/8/2026,4/15/2026,"Hyderabad, TS",Returning,Loan,Yes,Closed
+ENQ023,Ananya,9801782223,user22@example.com,Male,Maruti Swift,Call,4/7/2026,4/16/2026,"Chennai, TN",New,Loan,No,Contacted
+ENQ024,Arjun,9882062091,user23@example.com,Male,Hyundai i20,Walk-in,3/23/2026,3/28/2026,"Chennai, TN",New,EMI,No,New Lead
+ENQ025,Arjun,9306307674,user24@example.com,Female,Honda City,Call,3/30/2026,3/31/2026,"Chennai, TN",New,Cash,Yes,New Lead
+ENQ026,Vikram,9795531378,user25@example.com,Female,Hyundai i20,Call,4/12/2026,4/22/2026,"Hyderabad, TS",New,Loan,Yes,Booked
+ENQ027,Karthik,9893234953,user26@example.com,Male,Hyundai i20,Website,3/19/2026,3/27/2026,"Coimbatore, TN",Returning,Loan,Yes,New Lead
+ENQ028,Divya,9955486997,user27@example.com,Female,Tata Nexon,Walk-in,4/7/2026,4/13/2026,"Chennai, TN",Returning,Cash,Yes,Closed
+ENQ029,Vikram,9552203528,user28@example.com,Female,Kia Seltos,Walk-in,3/30/2026,4/9/2026,"Hyderabad, TS",New,EMI,No,New Lead
+ENQ030,Ravi,9332943610,user29@example.com,Female,Maruti Swift,Website,3/24/2026,3/28/2026,"Chennai, TN",Returning,Cash,No,New Lead
+ENQ031,Vikram,9226425645,user30@example.com,Male,Tata Nexon,Call,3/25/2026,3/29/2026,"Hyderabad, TS",Returning,Cash,No,Test Ride
+ENQ032,Arjun,9148124440,user31@example.com,Female,Tata Nexon,Website,3/24/2026,3/27/2026,"Bangalore, KA",Returning,Loan,No,Booked
+ENQ033,Ananya,9379177922,user32@example.com,Male,Kia Seltos,Walk-in,3/20/2026,3/27/2026,"Hyderabad, TS",New,Loan,Yes,Contacted
+ENQ034,Karthik,9227817015,user33@example.com,Female,Hyundai i20,Website,4/8/2026,4/13/2026,"Bangalore, KA",New,Loan,Yes,Test Ride
+ENQ035,Karthik,9366294976,user34@example.com,Female,Maruti Swift,Website,3/25/2026,4/3/2026,"Coimbatore, TN",New,Cash,No,New Lead
+ENQ036,Ananya,9503054751,user35@example.com,Female,Hyundai i20,Call,3/28/2026,4/3/2026,"Hyderabad, TS",New,Loan,No,Closed
+ENQ037,Karthik,9435557492,user36@example.com,Male,Maruti Swift,Walk-in,4/3/2026,4/4/2026,"Coimbatore, TN",New,EMI,No,Contacted
+ENQ038,Ananya,9394960969,user37@example.com,Female,Maruti Swift,Call,3/18/2026,3/20/2026,"Coimbatore, TN",Returning,Loan,No,Booked
+ENQ039,Karthik,9584748006,user38@example.com,Female,Tata Nexon,Call,4/10/2026,4/13/2026,"Hyderabad, TS",New,Loan,Yes,New Lead
+ENQ040,Karthik,9344054199,user39@example.com,Male,Tata Nexon,Walk-in,4/12/2026,4/14/2026,"Hyderabad, TS",Returning,EMI,No,Test Ride
+ENQ041,Meera,9476732277,user40@example.com,Female,Honda City,Call,3/20/2026,3/21/2026,"Coimbatore, TN",Returning,Cash,Yes,Closed
+ENQ042,Arjun,9626130672,user41@example.com,Male,Kia Seltos,Walk-in,4/4/2026,4/6/2026,"Coimbatore, TN",New,EMI,Yes,Closed
+ENQ043,Ravi,9910635445,user42@example.com,Female,Kia Seltos,Walk-in,3/20/2026,3/25/2026,"Chennai, TN",Returning,EMI,Yes,Booked
+ENQ044,Vikram,9405222306,user43@example.com,Female,Maruti Swift,Website,3/26/2026,3/28/2026,"Hyderabad, TS",Returning,Loan,No,New Lead
+ENQ045,Ananya,9992802737,user44@example.com,Male,Kia Seltos,Call,4/3/2026,4/10/2026,"Bangalore, KA",New,EMI,No,New Lead
+ENQ046,Arjun,9905982950,user45@example.com,Male,Honda City,Walk-in,4/1/2026,4/4/2026,"Hyderabad, TS",New,Cash,Yes,New Lead
+ENQ047,Sneha,9855376521,user46@example.com,Male,Kia Seltos,Walk-in,4/6/2026,4/7/2026,"Chennai, TN",Returning,Loan,Yes,Contacted
+ENQ048,Vikram,9894249820,user47@example.com,Male,Tata Nexon,Walk-in,4/1/2026,4/11/2026,"Bangalore, KA",Returning,Cash,No,New Lead
+ENQ049,Ananya,9318316658,user48@example.com,Female,Hyundai i20,Walk-in,4/3/2026,4/12/2026,"Coimbatore, TN",New,Loan,Yes,Booked
+ENQ050,Ravi,9561059525,user49@example.com,Female,Hyundai i20,Walk-in,3/21/2026,3/30/2026,"Bangalore, KA",New,Cash,No,Contacted
+ENQ051,Vikram,9803570215,user50@example.com,Female,Maruti Swift,Walk-in,4/16/2026,4/18/2026,"Coimbatore, TN",Returning,Cash,No,Contacted
+ENQ052,Karthik,9510786926,user51@example.com,Female,Kia Seltos,Walk-in,3/30/2026,4/6/2026,"Hyderabad, TS",Returning,Cash,No,Test Ride
+ENQ053,Divya,9150637961,user52@example.com,Male,Hyundai i20,Walk-in,4/16/2026,4/25/2026,"Bangalore, KA",New,Loan,Yes,Booked
+ENQ054,Vikram,9234323354,user53@example.com,Male,Kia Seltos,Website,3/17/2026,3/18/2026,"Bangalore, KA",New,EMI,Yes,Booked
+ENQ055,Karthik,9925354413,user54@example.com,Male,Hyundai i20,Walk-in,3/18/2026,3/20/2026,"Hyderabad, TS",New,Loan,No,Booked
+ENQ056,Ananya,9479306566,user55@example.com,Male,Honda City,Call,4/9/2026,4/10/2026,"Chennai, TN",Returning,EMI,Yes,Booked
+ENQ057,Karthik,9921338853,user56@example.com,Male,Honda City,Walk-in,4/4/2026,4/13/2026,"Hyderabad, TS",Returning,Loan,Yes,Test Ride
+ENQ058,Ananya,9224701911,user57@example.com,Female,Hyundai i20,Call,3/17/2026,3/20/2026,"Bangalore, KA",Returning,Loan,No,Closed
+ENQ059,Divya,9354418791,user58@example.com,Male,Honda City,Call,3/26/2026,3/27/2026,"Hyderabad, TS",Returning,Loan,Yes,Test Ride
+ENQ060,Sneha,9259562184,user59@example.com,Male,Kia Seltos,Call,3/18/2026,3/28/2026,"Coimbatore, TN",Returning,EMI,No,Test Ride
+ENQ061,Divya,9877137849,user60@example.com,Female,Honda City,Call,3/23/2026,4/1/2026,"Chennai, TN",Returning,Cash,No,New Lead
+ENQ062,Sneha,9478459012,user61@example.com,Male,Tata Nexon,Website,3/20/2026,3/28/2026,"Chennai, TN",New,EMI,Yes,Closed
+ENQ063,Karthik,9492048725,user62@example.com,Male,Honda City,Website,3/19/2026,3/27/2026,"Chennai, TN",New,EMI,Yes,Closed
+ENQ064,Karthik,9227445899,user63@example.com,Male,Honda City,Call,3/30/2026,4/3/2026,"Hyderabad, TS",New,Cash,Yes,Booked
+ENQ065,Sneha,9714555881,user64@example.com,Male,Kia Seltos,Walk-in,3/27/2026,4/1/2026,"Chennai, TN",Returning,Cash,Yes,Closed
+ENQ066,Arjun,9421519189,user65@example.com,Male,Honda City,Call,4/16/2026,4/22/2026,"Bangalore, KA",Returning,EMI,No,Test Ride
+ENQ067,Karthik,9180233313,user66@example.com,Male,Kia Seltos,Walk-in,4/2/2026,4/12/2026,"Hyderabad, TS",Returning,Loan,No,Booked
+ENQ068,Vikram,9513113472,user67@example.com,Male,Kia Seltos,Walk-in,3/27/2026,4/3/2026,"Bangalore, KA",Returning,Cash,Yes,Closed
+ENQ069,Sneha,9798936944,user68@example.com,Female,Hyundai i20,Website,4/3/2026,4/8/2026,"Chennai, TN",Returning,EMI,No,Contacted
+ENQ070,Karthik,9217128879,user69@example.com,Male,Hyundai i20,Website,3/19/2026,3/23/2026,"Bangalore, KA",Returning,EMI,Yes,Test Ride
+ENQ071,Ananya,9586550941,user70@example.com,Female,Honda City,Website,3/18/2026,3/27/2026,"Chennai, TN",Returning,Loan,No,Test Ride
+ENQ072,Meera,9598936077,user71@example.com,Male,Tata Nexon,Walk-in,4/15/2026,4/16/2026,"Coimbatore, TN",Returning,Loan,No,Test Ride
+ENQ073,Divya,9337664683,user72@example.com,Male,Honda City,Walk-in,3/27/2026,4/4/2026,"Coimbatore, TN",Returning,Cash,No,Contacted
+ENQ074,Vikram,9415720845,user73@example.com,Male,Hyundai i20,Website,4/3/2026,4/6/2026,"Hyderabad, TS",New,Cash,No,Test Ride
+ENQ075,Ravi,9463281186,user74@example.com,Male,Hyundai i20,Website,4/3/2026,4/8/2026,"Chennai, TN",New,EMI,Yes,Contacted
+ENQ076,Vikram,9915183796,user75@example.com,Female,Kia Seltos,Call,3/21/2026,3/30/2026,"Coimbatore, TN",New,EMI,Yes,Test Ride
+ENQ077,Karthik,9702381899,user76@example.com,Male,Kia Seltos,Walk-in,3/25/2026,3/30/2026,"Bangalore, KA",Returning,Loan,No,New Lead
+ENQ078,Meera,9796614234,user77@example.com,Female,Hyundai i20,Website,4/9/2026,4/16/2026,"Hyderabad, TS",Returning,Cash,Yes,New Lead
+ENQ079,Meera,9114875404,user78@example.com,Male,Honda City,Call,3/18/2026,3/21/2026,"Hyderabad, TS",Returning,EMI,No,Closed
+ENQ080,Meera,9346898564,user79@example.com,Female,Hyundai i20,Call,3/29/2026,3/30/2026,"Coimbatore, TN",Returning,Loan,Yes,Booked
+ENQ081,Karthik,9933969415,user80@example.com,Male,Maruti Swift,Call,3/17/2026,3/27/2026,"Bangalore, KA",Returning,Cash,Yes,New Lead
+ENQ082,Arjun,9394893255,user81@example.com,Female,Tata Nexon,Website,3/26/2026,3/28/2026,"Hyderabad, TS",New,Loan,No,Test Ride
+ENQ083,Karthik,9333127357,user82@example.com,Female,Tata Nexon,Walk-in,3/24/2026,4/2/2026,"Hyderabad, TS",New,Loan,Yes,Test Ride
+ENQ084,Karthik,9771869919,user83@example.com,Male,Hyundai i20,Website,4/15/2026,4/20/2026,"Hyderabad, TS",New,Cash,No,New Lead
+ENQ085,Vikram,9998955134,user84@example.com,Male,Maruti Swift,Walk-in,3/17/2026,3/20/2026,"Coimbatore, TN",Returning,Cash,No,Test Ride
+ENQ086,Meera,9811449565,user85@example.com,Male,Maruti Swift,Walk-in,4/14/2026,4/20/2026,"Bangalore, KA",New,Cash,Yes,Closed
+ENQ087,Ravi,9883569527,user86@example.com,Male,Honda City,Walk-in,4/9/2026,4/16/2026,"Bangalore, KA",New,Cash,Yes,New Lead
+ENQ088,Sneha,9894997341,user87@example.com,Female,Tata Nexon,Website,4/15/2026,4/24/2026,"Bangalore, KA",Returning,EMI,No,Test Ride
+ENQ089,Sneha,9652147567,user88@example.com,Male,Maruti Swift,Walk-in,4/15/2026,4/19/2026,"Hyderabad, TS",Returning,Loan,Yes,Booked
+ENQ090,Karthik,9402351720,user89@example.com,Female,Maruti Swift,Walk-in,3/29/2026,4/5/2026,"Coimbatore, TN",New,EMI,No,Contacted
+ENQ091,Ravi,9788229923,user90@example.com,Male,Kia Seltos,Walk-in,3/26/2026,3/31/2026,"Hyderabad, TS",New,EMI,No,Contacted
+ENQ092,Karthik,9586981210,user91@example.com,Female,Hyundai i20,Website,3/26/2026,4/1/2026,"Coimbatore, TN",Returning,EMI,Yes,Closed
+ENQ093,Sneha,9545757512,user92@example.com,Female,Maruti Swift,Walk-in,4/6/2026,4/15/2026,"Coimbatore, TN",Returning,Loan,Yes,Closed
+ENQ094,Karthik,9524573098,user93@example.com,Female,Hyundai i20,Website,4/4/2026,4/5/2026,"Bangalore, KA",New,EMI,No,Booked
+ENQ095,Sneha,9238447669,user94@example.com,Male,Kia Seltos,Call,4/5/2026,4/9/2026,"Chennai, TN",Returning,Cash,No,Closed
+ENQ096,Arjun,9965098465,user95@example.com,Male,Tata Nexon,Call,3/30/2026,4/6/2026,"Bangalore, KA",New,EMI,No,Test Ride
+ENQ097,Karthik,9617548590,user96@example.com,Female,Kia Seltos,Call,4/6/2026,4/8/2026,"Coimbatore, TN",Returning,Cash,No,Test Ride
+ENQ098,Divya,9575528055,user97@example.com,Female,Tata Nexon,Walk-in,3/25/2026,3/28/2026,"Coimbatore, TN",Returning,EMI,No,Booked
+ENQ099,Arjun,9359496766,user98@example.com,Female,Maruti Swift,Walk-in,3/26/2026,4/2/2026,"Bangalore, KA",New,EMI,Yes,New Lead
+ENQ100,Ananya,9355957839,user99@example.com,Male,Tata Nexon,Walk-in,4/12/2026,4/22/2026,"Coimbatore, TN",Returning,Loan,Yes,New Lead

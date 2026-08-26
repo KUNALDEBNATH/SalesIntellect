@@ -1,0 +1,101 @@
+Enquiry ID,Customer Name,Feedback,Rating,Date
+ENQ001,Ravi,Excellent service,3,4/25/2026
+ENQ002,Arjun,Could be better,2,5/2/2026
+ENQ003,Sneha,Not happy,4,5/2/2026
+ENQ004,Ananya,Very satisfied,2,4/28/2026
+ENQ005,Karthik,Excellent service,1,5/3/2026
+ENQ006,Ananya,Not happy,5,5/2/2026
+ENQ007,Ravi,Good experience,1,5/3/2026
+ENQ008,Ravi,Not happy,4,4/20/2026
+ENQ009,Sneha,Could be better,1,5/5/2026
+ENQ010,Vikram,Very satisfied,2,4/29/2026
+ENQ011,Meera,Could be better,4,4/29/2026
+ENQ012,Sneha,Very satisfied,4,4/19/2026
+ENQ013,Karthik,Not happy,3,5/3/2026
+ENQ014,Karthik,Excellent service,2,4/26/2026
+ENQ015,Karthik,Average service,3,4/28/2026
+ENQ016,Karthik,Very satisfied,5,4/25/2026
+ENQ017,Divya,Average service,1,5/3/2026
+ENQ018,Ananya,Average service,2,5/2/2026
+ENQ019,Ananya,Excellent service,5,5/3/2026
+ENQ020,Ananya,Could be better,5,4/28/2026
+ENQ021,Karthik,Good experience,4,4/24/2026
+ENQ022,Divya,Not happy,2,4/22/2026
+ENQ023,Ananya,Good experience,1,5/1/2026
+ENQ024,Meera,Could be better,5,4/23/2026
+ENQ025,Divya,Could be better,3,5/2/2026
+ENQ026,Vikram,Average service,2,4/30/2026
+ENQ027,Meera,Very satisfied,5,4/26/2026
+ENQ028,Meera,Could be better,5,4/29/2026
+ENQ029,Divya,Could be better,3,4/27/2026
+ENQ030,Vikram,Average service,2,4/22/2026
+ENQ031,Arjun,Excellent service,1,5/2/2026
+ENQ032,Meera,Very satisfied,4,4/29/2026
+ENQ033,Divya,Good experience,5,5/1/2026
+ENQ034,Ananya,Could be better,1,4/27/2026
+ENQ035,Divya,Could be better,1,4/28/2026
+ENQ036,Arjun,Could be better,4,4/25/2026
+ENQ037,Vikram,Average service,2,4/21/2026
+ENQ038,Karthik,Very satisfied,3,5/6/2026
+ENQ039,Meera,Not happy,1,4/27/2026
+ENQ040,Divya,Good experience,5,5/1/2026
+ENQ041,Ananya,Good experience,2,4/26/2026
+ENQ042,Arjun,Average service,2,5/1/2026
+ENQ043,Divya,Excellent service,4,4/18/2026
+ENQ044,Karthik,Very satisfied,4,4/25/2026
+ENQ045,Karthik,Could be better,5,5/1/2026
+ENQ046,Ananya,Average service,3,5/1/2026
+ENQ047,Karthik,Good experience,1,5/5/2026
+ENQ048,Meera,Good experience,2,4/19/2026
+ENQ049,Arjun,Could be better,4,4/24/2026
+ENQ050,Arjun,Not happy,3,4/19/2026
+ENQ051,Divya,Average service,2,4/24/2026
+ENQ052,Sneha,Very satisfied,5,4/26/2026
+ENQ053,Karthik,Excellent service,5,4/22/2026
+ENQ054,Meera,Good experience,5,4/25/2026
+ENQ055,Vikram,Excellent service,3,5/2/2026
+ENQ056,Karthik,Not happy,4,4/29/2026
+ENQ057,Ravi,Not happy,4,4/26/2026
+ENQ058,Meera,Very satisfied,3,4/18/2026
+ENQ059,Arjun,Very satisfied,3,4/25/2026
+ENQ060,Divya,Not happy,5,5/1/2026
+ENQ061,Divya,Very satisfied,1,5/4/2026
+ENQ062,Arjun,Not happy,5,4/27/2026
+ENQ063,Vikram,Average service,2,4/30/2026
+ENQ064,Vikram,Good experience,2,5/3/2026
+ENQ065,Sneha,Average service,1,4/22/2026
+ENQ066,Vikram,Excellent service,2,4/26/2026
+ENQ067,Meera,Very satisfied,3,5/1/2026
+ENQ068,Divya,Not happy,3,4/29/2026
+ENQ069,Ravi,Good experience,3,4/29/2026
+ENQ070,Ravi,Average service,5,4/23/2026
+ENQ071,Meera,Good experience,4,4/20/2026
+ENQ072,Karthik,Very satisfied,4,4/24/2026
+ENQ073,Divya,Not happy,4,4/21/2026
+ENQ074,Sneha,Could be better,2,4/27/2026
+ENQ075,Karthik,Average service,4,4/26/2026
+ENQ076,Ananya,Good experience,3,5/6/2026
+ENQ077,Divya,Good experience,5,4/26/2026
+ENQ078,Meera,Could be better,5,4/23/2026
+ENQ079,Vikram,Could be better,5,4/28/2026
+ENQ080,Vikram,Could be better,4,4/29/2026
+ENQ081,Sneha,Average service,4,5/1/2026
+ENQ082,Sneha,Not happy,1,5/2/2026
+ENQ083,Ananya,Average service,2,4/27/2026
+ENQ084,Ravi,Could be better,2,4/21/2026
+ENQ085,Karthik,Good experience,4,5/4/2026
+ENQ086,Ravi,Could be better,4,4/29/2026
+ENQ087,Divya,Excellent service,2,5/3/2026
+ENQ088,Sneha,Average service,5,4/19/2026
+ENQ089,Vikram,Very satisfied,4,5/2/2026
+ENQ090,Karthik,Average service,2,4/19/2026
+ENQ091,Ananya,Not happy,4,4/22/2026
+ENQ092,Sneha,Not happy,2,4/23/2026
+ENQ093,Ravi,Not happy,5,4/23/2026
+ENQ094,Sneha,Average service,3,4/27/2026
+ENQ095,Meera,Good experience,2,4/27/2026
+ENQ096,Meera,Not happy,4,4/24/2026
+ENQ097,Meera,Not happy,1,5/2/2026
+ENQ098,Sneha,Not happy,3,4/28/2026
+ENQ099,Divya,Good experience,4,4/29/2026
+ENQ100,Karthik,Not happy,1,4/27/2026
