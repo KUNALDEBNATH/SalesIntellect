@@ -16,7 +16,6 @@ if not settings.configured:
             "django.contrib.contenttypes",
             "django.contrib.auth",
             "corsheaders",
-            "rest_framework",
         ],
         MIDDLEWARE=[
             "corsheaders.middleware.CorsMiddleware",
@@ -72,10 +71,52 @@ except ImportError as e:
     IMPORT_OK = False
 
 # ── New: file attachment support (document + image analysis) ────────────────
+# domain_guard and bot_identity have no dependency on the attachment
+# pipeline (pure stdlib) and always import cleanly.
 import domain_guard
-import attachment_handler
 import bot_identity
-from attachment_handler import handle_attachment, AttachmentError
+
+# attachment_handler pulls in document_parser -> rag_utils, pypdf, docx,
+# pytesseract, etc. If any of those are missing/misconfigured, this import
+# used to raise uncaught and take the ENTIRE server down — including plain
+# sales-chat queries, which never touch this code path. Isolate it: file
+# uploads / document follow-ups degrade to a clear error instead.
+try:
+    import attachment_handler
+    from attachment_handler import handle_attachment, AttachmentError
+    ATTACHMENTS_OK = True
+    _attachments_init_error = ""
+except ImportError as e:
+    print(f"[WARNING] Attachment/document pipeline unavailable: {e}")
+    print("[WARNING] Sales chat will still work; file uploads and document "
+          "follow-ups are disabled until this is fixed.")
+    ATTACHMENTS_OK = False
+    _attachments_init_error = str(e)
+
+    class _AttachmentHandlerStub:
+        """No-op stand-in so call sites below don't need to special-case
+        every attachment_handler.* call when the pipeline is unavailable."""
+        @staticmethod
+        def mark_other_turn(session_id=None): pass
+        @staticmethod
+        def has_stored_document(session_id=None): return False
+        @staticmethod
+        def looks_like_context_followup(query): return False
+        @staticmethod
+        def answer_from_stored_document(query, chatbot=None, session_id=None): return None
+        @staticmethod
+        def clear_stored_document(session_id=None): pass
+
+    attachment_handler = _AttachmentHandlerStub()
+
+    class AttachmentError(Exception):
+        pass
+
+    def handle_attachment(*_a, **_k):
+        raise AttachmentError(
+            "Attachment support is unavailable on this server "
+            "(a required dependency failed to import at startup)."
+        )
 
 _chatbot: "IntelligentSalesChatbot | None" = None
 _init_error: str = ""
@@ -269,8 +310,22 @@ class ChatView(View):
         )
 
         # ── Domain restriction: never let unrelated questions reach the LLM ──
-        if not is_context_followup and not domain_guard.is_in_domain(
-                query, has_attachment=bool(uploaded_file), session_id=session_id):
+        in_domain = domain_guard.is_in_domain(
+            query, has_attachment=bool(uploaded_file), session_id=session_id)
+
+        # A query can be a legitimate document follow-up without matching
+        # any of the explicit pronoun/"document" phrasings above — e.g.
+        # "tell the imp points only", "just the key details". Those don't
+        # mention sales vocabulary either, so `is_in_domain` was rejecting
+        # them outright even though a document is actively in focus for
+        # this session. If there IS a stored document and the query isn't
+        # otherwise recognised as an in-domain sales question, assume it's
+        # about that document rather than refusing.
+        if not is_context_followup and not in_domain and not uploaded_file and bool(query):
+            if attachment_handler.has_stored_document(session_id):
+                is_context_followup = True
+
+        if not is_context_followup and not in_domain:
             attachment_handler.mark_other_turn(session_id)
             domain_guard.mark_other_turn(session_id)
             refusal = domain_guard.refusal_message()
@@ -419,11 +474,13 @@ class HealthView(View):
                 "chatbot_ready": _chatbot is not None,
                 "llm_ready": llm_ready,
                 "vlm_ready": vlm_info.get("vlm_ready", False),
+                "attachments_ready": ATTACHMENTS_OK,
                 "query_engine": query_engine_info,
                 "datasets": _datasets_loaded,
                 "dataset_quality": dataset_quality,
                 "active_sessions": len(_session_histories),
                 "init_error": _init_error or None,
+                "attachments_init_error": _attachments_init_error or None,
                 "index_cache": os.path.abspath(INDEX_CACHE) if os.path.exists(INDEX_CACHE) else None,
             }
         )

@@ -93,32 +93,6 @@ TASK_TOKENS = [
     "<TASK=DOCUMENT_ANSWER>",
 ]
 
-# Task-conditioning tokens (added for document understanding support).
-# Including these in the special set means the tokenizer treats them as
-# single atoms — the model sees <TASK=DOCUMENT_SUMMARY> as ONE token,
-# not character-split fragments, so it reliably learns to condition on it.
-TASK_TOKENS = [
-    "<TASK=SALES_QA>",
-    "<TASK=DOCUMENT_SUMMARY>",
-    "<TASK=SHORT_SUMMARY>",
-    "<TASK=KEY_POINTS>",
-    "<TASK=DETAILED_SUMMARY>",
-    "<TASK=DOCUMENT_TYPE>",
-    "<TASK=DOCUMENT_PURPOSE>",
-    "<TASK=DOCUMENT_TOPIC>",
-    "<TASK=SECTION_SUMMARY>",
-    "<TASK=SECTION_UNDERSTANDING>",
-    "<TASK=SECTION_FACTS>",
-    "<TASK=FACTS_EXTRACTION>",
-    "<TASK=CLAIMS_EXTRACTION>",
-    "<TASK=EVIDENCE_EXTRACTION>",
-    "<TASK=CONCLUSIONS>",
-    "<TASK=ENTITY_EXTRACTION>",
-    "<TASK=CROSS_SECTION_REASONING>",
-    "<TASK=DOCUMENT_QA>",
-    "<TASK=DOCUMENT_ANSWER>",
-]
-
 # Model — bump D_MODEL to 256 or 512 for even better quality
 D_MODEL   = 256        # was 128
 N_HEADS   = 8          # was 4
@@ -155,7 +129,7 @@ class CharBPETokenizer:
     def train(self, texts: List[str], vocab_size: int = VOCAB_SIZE) -> None:
         print(f"  [Tokenizer] Training BPE on {len(texts)} texts …")
         corpus = " ".join(texts)
-        special = {PAD, UNK, BOS, EOS, SEP} | set(TASK_TOKENS) | set(TASK_TOKENS)
+        special = {PAD, UNK, BOS, EOS, SEP} | set(TASK_TOKENS)
 
         # Seed: all unique chars
         chars = sorted(set(corpus))

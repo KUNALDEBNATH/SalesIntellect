@@ -1,33 +1,32 @@
-# ═══════════════════════════════════════════════════════════════════
-#  Platinum Sales Chatbot — Requirements
-#  Install: pip install -r requirements.txt
-# ═══════════════════════════════════════════════════════════════════
+# ── Web framework ─────────────────────────────────────────────────────────
+Django>=4.2,<5.2
+django-cors-headers>=4.3
+# NOTE: djangorestframework was in the old INSTALLED_APPS but nothing in
+# this codebase uses DRF (every view is a plain django.views.View +
+# JsonResponse). Removed from api.py and from here — if that changes,
+# add it back.
 
-# ── Core ML (scratch LLM — train.py / scratch_llm.py) ─────────────
-torch>=2.1.0                  # neural network, training loop, inference
-scikit-learn>=1.3.0           # TfidfVectorizer + cosine_similarity (retriever)
-numpy>=1.24.0                 # array ops used by retriever
+# ── Data / ML (all local — no external API calls, no pretrained weights) ──
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3          # TF-IDF retrieval (SmartFallbackEngine, rag_utils)
+torch>=2.1                 # scratch-trained SalesGPT — CPU build by default;
+                            # for CUDA, install per https://pytorch.org/get-started/locally/
+                            # instead of the plain PyPI wheel.
 
-# ── Data handling ──────────────────────────────────────────────────
-pandas>=2.0.0                 # CSV loading, dataframe operations
+# ── Document / attachment parsing ──────────────────────────────────────────
+pypdf>=4.0                 # PDF text extraction
+python-docx>=1.1           # imported as `docx` — .docx extraction
+openpyxl>=3.1              # required by pandas for .xlsx (not imported directly)
+xlrd>=2.0                  # required by pandas for legacy .xls (not imported directly)
+Pillow>=10.0                # imported as `PIL` — image handling
 
-# ── Web API (api.py) ───────────────────────────────────────────────
-django>=4.2.0                 # HTTP server, routing, views
-djangorestframework>=3.14.0   # REST framework used in INSTALLED_APPS
-django-cors-headers>=4.3.0    # CORS middleware (CORS_ALLOW_ALL_ORIGINS)
-
-# ── Document parsing (document_parser.py / attachment_handler.py) ─
-pypdf>=3.0.0                  # PDF text extraction
-python-docx>=1.1.0            # .docx Word document parsing
-openpyxl>=3.1.0               # .xlsx Excel file reading (used by pandas)
-xlrd>=2.0.1                   # .xls legacy Excel reading (used by pandas)
-
-# ── Image handling (vision_parser.py / attachment_handler.py) ─────
-Pillow>=10.0.0                # image open / convert (PIL.Image)
-pytesseract>=0.3.10           # OCR wrapper — also needs Tesseract binary:
-                              #   Windows : https://github.com/UB-Mannheim/tesseract/wiki
-                              #   Linux   : sudo apt install tesseract-ocr
-                              #   macOS   : brew install tesseract
-
-# ── Utilities ──────────────────────────────────────────────────────
-pathlib2>=2.3.7; python_version < "3.10"   # backport (not needed on 3.10+)
+# ── OCR ──────────────────────────────────────────────────────────────────
+pytesseract>=0.3.10
+# pytesseract is a wrapper around the Tesseract OCR binary, which is NOT a
+# pip package. Install it separately:
+#   Ubuntu/Debian : sudo apt-get install tesseract-ocr
+#   macOS         : brew install tesseract
+#   Windows       : https://github.com/UB-Mannheim/tesseract/wiki
+# Without it, vision_parser.py silently falls back to pixel-heuristic
+# image descriptions (no OCR, no text-based Q&A on images).

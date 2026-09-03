@@ -24,21 +24,38 @@ from typing import Optional
 from PIL import Image
 
 # ── Scratch LLM (text, for answering questions about OCR-extracted content) ──
-from scratch_llm import ScratchLLM as _ScratchLLM
+# Reuse the single instance test.py loads at startup instead of loading a
+# second copy of the same weights — see attachment_handler.py for the full
+# rationale.
+try:
+    from test import _scratch_llm, _load_llm as _ensure_llm
+except ImportError:
+    from scratch_llm import ScratchLLM as _ScratchLLM
 
-_scratch_llm  = _ScratchLLM()
-_llm_lock     = threading.Lock()
-_llm_loaded   = False
+    _scratch_llm  = _ScratchLLM()
+    _llm_lock     = threading.Lock()
+    _llm_loaded   = False
 
+    def _ensure_llm() -> bool:
+        global _llm_loaded
+        if _llm_loaded:
+            return True
+        with _llm_lock:
+            if not _llm_loaded:
+                _llm_loaded = _scratch_llm.load()
+        return _llm_loaded
 
-def _ensure_llm() -> bool:
-    global _llm_loaded
-    if _llm_loaded:
-        return True
-    with _llm_lock:
-        if not _llm_loaded:
-            _llm_loaded = _scratch_llm.load()
-    return _llm_loaded
+# ── Anti-hallucination verification, same guarantee attachment_handler.py
+# already applies to document answers — OCR'd images had no such check. ──
+from document_verifier import ground_answer_or_fallback
+
+# Reuse the same from-scratch extractive-QA engine document_parser.py uses
+# for uploaded text documents, so a specific question about an OCR'd image
+# ("what's the total on this invoice?", "what's the phone number here?")
+# gets a precise, grounded sentence pulled straight from the OCR text
+# instead of depending on the tiny neural net, which was never trained on
+# this kind of content and is unreliable for it.
+from document_parser import ParsedDocument, extractive_qa, is_generic_overview_request, summarize_text
 
 
 # ════════════════════════════════════ OCR ═════════════════════════════════════
@@ -119,6 +136,22 @@ def analyze_image(image_path: str, query: str) -> str:
     ocr_text = _ocr(image_path)
 
     if ocr_text and len(ocr_text.strip()) >= 10:
+        pseudo_doc = ParsedDocument(kind="text", filename=image_path, raw_text=ocr_text)
+
+        # ── Step 0: deterministic extractive QA over the OCR'd text ────────
+        # Skipped for broad "describe this image" requests, which want a
+        # summary rather than the single sentence closest to the (generic)
+        # question.
+        if not is_generic_overview_request(query):
+            qa_hits = extractive_qa(pseudo_doc, query, top_k=3)
+            if qa_hits:
+                answer = "\n".join(f"- {s}" for s in qa_hits) if len(qa_hits) > 1 else qa_hits[0]
+                return (
+                    f"[Image analysed via OCR]\n\n{answer}\n\n"
+                    f"--- Extracted text ---\n{ocr_text[:800]}"
+                    + (" …" if len(ocr_text) > 800 else "")
+                )
+
         # ── Try scratch LLM first ─────────────────────────────────────────────
         if _ensure_llm():
             prompt = (
@@ -126,14 +159,21 @@ def analyze_image(image_path: str, query: str) -> str:
                 f"{ocr_text[:1500]}\n\n"
                 f"Question: {query}"
             )
-            answer = _scratch_llm.generate(prompt, max_new=120, temperature=0.5, top_p=0.9)
+            answer = _scratch_llm.generate_for_document(prompt, max_new=120, temperature=0.5, top_p=0.9)
             if answer and len(answer.strip()) >= 15:
-                return (
-                    f"[Image analysed via OCR]\n\n"
-                    f"{answer.strip()}\n\n"
-                    f"--- Extracted text ---\n{ocr_text[:800]}"
-                    + (" …" if len(ocr_text) > 800 else "")
-                )
+                BAD = ["i don't know", "i cannot", "as an ai", "i was trained",
+                       "no information", "not able to"]
+                if not any(b in answer.lower() for b in BAD):
+                    grounded = ground_answer_or_fallback(
+                        answer.strip(), [ocr_text], document_filename=image_path,
+                        fallback_context=ocr_text,
+                    )
+                    return (
+                        f"[Image analysed via OCR]\n\n"
+                        f"{grounded}\n\n"
+                        f"--- Extracted text ---\n{ocr_text[:800]}"
+                        + (" …" if len(ocr_text) > 800 else "")
+                    )
 
         # ── Scratch LLM unavailable or returned nothing: return raw OCR ───────
         return (
