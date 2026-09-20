@@ -1,4 +1,4 @@
-# Platinum LLM — Sales Intelligence Chatbot
+# SalesIntellect — Sales Intelligence Chatbot
 
 A modular **AI-powered sales intelligence and document-question-answering system** built for automotive sales workflows.
 
